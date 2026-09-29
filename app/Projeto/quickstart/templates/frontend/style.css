@@ -1,0 +1,561 @@
+/*   -----  CSS site teste  ----------------*/
+
+/**************************
+*  cores                  *
+***************************/
+:root {                                    /*declarar as variaveis de cor*/ 
+	--cor-01:   #443D65;  
+    --cor-02:   #64326F;
+    --cor-03:   #E65096;
+    --cor-04:   #594B42;
+    --cor-05:   #5B4A40;
+    --cor-06:   #3D2316;
+    --cor-07:   #F3EAE2;
+
+}
+
+/**************************
+*  formatações iniciais    *
+***************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    background-color: #262626;
+    height: 100%;
+    min-height: 100vh;
+}
+h1,h2,h3,h4,h5,h6,a{
+    font-family: "Faculty Glyphic", sans-serif;
+}
+p, small, label{
+    font-family: "Sour Gummy", sans-serif;
+}
+
+/***********************************************************************************************************************************
+*  wrapper                *
+***************************/
+#wrapper{
+    width: 100%;
+    min-height: 100vh !important; /* Garante altura mínima igual à altura da janela */
+
+}
+
+/**************************
+*  navbar                 *
+***************************/
+#navbar{
+    background-color: var(--cor-01);
+    border-bottom: 1px solid white;
+}
+a.nav-link{
+    color: white!important;
+}
+.nav-item .active{
+    color: var(--cor-03)!important;
+    font-weight: bold;
+}
+.navbar-nav .nav-link:hover{
+    color: var(--cor-03) !important;   /* no hover, !important, para se sobrepor a todas as outras regras*/
+    text-decoration: underline;
+}
+
+.navbar-toggler{
+    color: white;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23FFFFFF' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/**************************
+*  main                   *
+***************************/
+#main{
+    background-image:linear-gradient(to bottom right, var(--cor-02),var(--cor-03));
+    background-size: cover;
+    background-attachment: fixed;
+}
+#card-loan{
+    
+    background-color: white;
+    border:2px solid var(--cor-03);
+    border-radius: 20px;
+}
+
+.card-loan1{
+    
+    background-color: white;
+    border:2px solid var(--cor-03);
+    border-radius: 20px;
+}
+.texto-roxo{
+    color: var(--cor-02);
+    font-weight: bold;
+}
+
+/*  slider 1 -----------------------*/
+/* Customizações de cores e estilo */
+ .slider1-container {
+    position: relative;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+}
+.slider1-box {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: var(--cor-03);
+    border:1px solid var(--cor-03);
+    padding: 5px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+    font-weight: bold;
+}
+.slider1-box span {
+    flex: 1;
+    text-align: center;
+}
+.slider1-icons {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.slider1-track {
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, var(--primary-color, var(--cor-02)), var(--secondary-color, var(--cor-03)));
+    outline: none;
+    border-radius: 5px;
+}
+.slider1-track::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--thumb-color, #fff);
+    border: 2px solid var(--primary-color, var(--cor-03));
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider1-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/*  slider 2 -----------------------*/
+/* Customizações de cores e estilo */
+.slider2-container {
+    position: relative;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+}
+.slider2-box {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: var(--cor-03);
+    border:1px solid var(--cor-03);
+    padding: 5px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+    font-weight: bold;
+}
+.slider2-box span {
+    flex: 1;
+    text-align: center;
+}
+.slider2-icons {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.slider2-track {
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, var(--primary-color, var(--cor-02)), var(--secondary-color, var(--cor-03)));
+    outline: none;
+    border-radius: 5px;
+}
+.slider2-track::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--thumb-color, #fff);
+    border: 2px solid var(--primary-color, var(--cor-03));
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider2-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/*  slider 3 -----------------------*/
+/* Customizações de cores e estilo */
+.slider3-container {
+    position: relative;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+}
+.slider3-box {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: var(--cor-03);
+    border:1px solid var(--cor-03);
+    padding: 5px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+    font-weight: bold;
+}
+.slider3-box span {
+    flex: 1;
+    text-align: center;
+}
+.slider3-icons {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.slider3-track {
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, var(--primary-color, var(--cor-02)), var(--secondary-color, var(--cor-03)));
+    outline: none;
+    border-radius: 5px;
+}
+.slider3-track::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--thumb-color, #fff);
+    border: 2px solid var(--primary-color, var(--cor-03));
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider3-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+
+.tan-taeg{
+    font-weight: bold;
+}
+
+/*button*/
+.btn-primary{
+    background-color: var(--cor-02);
+    border: 1px solid var(--cor-02);
+} 
+.btn-primary:hover{
+    background-color: var(--cor-03);
+    border: 1px solid var(--cor-02);
+} 
+/*card tipo 2*/
+.card-tipo{
+    border: 1px solid var(--cor-02);
+    color: var(--cor-03);
+    border-radius: 10px;
+    text-decoration: none;
+}
+.card-tipo:hover{
+    border: 1px solid var(--cor-02);
+    color: var(--cor-02);
+    background-color: var(--cor-03);
+}
+
+/**************************
+*  footer                 *
+***************************/
+#footer{
+    background-color: var(--cor-01);
+    border-top: 1px solid white;
+}
+
+
+/**************************
+*  breakpoints            *
+***************************/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #card-loan{
+        width: 1000%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #card-loan{
+        width: 80%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #card-loan{
+        width: 70%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #card-loan{
+        width: 50%;
+    }
+}
+
+/*********************************************************************************************************
+*  pagina - login-cliente  *
+***************************/
+
+#video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+video, canvas {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#controls {
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+/*********************************************************************************************************
+*  pagina - login-agente  *
+***************************/
+.wrapper-login{
+    min-height: 100vh; /* Define a altura conforme necessário */
+}
+
+/* form */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+.btn-login {
+    background-color: var(--cor-02);
+    border: none;
+}
+.btn-login:hover {
+    background-color: var(--cor-03);
+}
+
+
+/*********************************************************************************************************
+*  pagina - documentos     *
+***************************/
+
+.text-cor3{
+    color:var(--cor-03);
+}
+.text-cor2{
+    color:var(--cor-02);
+}
+.border-cor3{
+    border: 1px solid var(--cor-03);
+}
+
+ /* Estilo para a checkbox */
+ .custom-checkbox .form-check-input {
+    width: 20px; /* Tamanho personalizado */
+    height: 20px; /* Tamanho personalizado */
+    border-radius: 4px; /* Bordas arredondadas */
+    border: 2px solid var(--cor-03); /* Borda personalizada */
+    background-color: #fff; /* Fundo padrão */
+    transition: all 0.3s ease; /* Transição para animação */
+    cursor: pointer;
+}
+
+.custom-checkbox .form-check-input:checked {
+    background-color: var(--cor-03); /* Fundo verde quando marcado */
+    border-color: var(--cor-03); /* Cor da borda ao marcar */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.7); /* Efeito de sombra */
+}
+
+.custom-checkbox .form-check-input:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Efeito ao focar */
+}
+
+/* Estilo para o label */
+.custom-checkbox .form-check-label {
+    font-size: 1rem; /* Ajuste o tamanho da fonte */
+    color: var(--cor-02); /* Cor do texto #333*/
+    margin-left: 8px; /* Espaço entre checkbox e texto */
+    cursor: pointer; /* Indica que o label é clicável */
+}
+
+
+/*********************************************************************************************************
+*  pagina - dashboard - cliente     *
+*************************************/
+
+/* Fundo alternado */
+.f-zebar1{
+    color: var(--cor-02);
+    background-color: #f0f0f0; /* Fundo claro para itens ímpares */
+}
+
+.f-zebar2 {
+    color: var(--cor-02);
+    background-color: #ffffff; /* Fundo branco para itens pares */
+}
+
+
+
+
+.table-div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+.table-header, .table-row {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+    align-items: center;
+}
+
+.table-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.col {
+    padding: 0 10px;
+    flex-shrink: 0;
+}
+
+.col-checkbox {
+    width: 5%;
+    text-align: center;
+}
+
+.col-name {
+    width: 30%;
+}
+
+.col-date {
+    width: 20%;
+}
+
+.col-status {
+    width: 20%;
+}
+
+.col-action {
+    width: 25%;
+    text-align: center;
+}
+
+/*********************************************************************************************************
+*  pagina - dashboard - agente      *
+*************************************/
+.checkbox-column {
+    display: flex;
+    flex-direction: column; /* Alinha as checkboxes verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+.title-right {
+    text-align: right; /* Alinha o título à direita */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/*********************************************************************************************************
+*  pagina - Error                   *
+*************************************/
+.wrapper-Error{
+    min-height: 100vh; /* Define a altura conforme necessário */
+    background-image:linear-gradient(to bottom right, var(--cor-02),var(--cor-03));
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+}
+
+.error{
+    text-align: center;
+}
+.h3-error{
+    color: white;
+    margin-top: 20px;
+}
+.p-error{
+    color: white;
+}
+
+.b1{
+    display: block;
+    max-width: 100%;
+    margin-top: 20px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: var(--cor-02);
+    color: white;
+    font-weight: bold;
+    text-decoration: none!important;
+    border: none;
+    transition-duration: 0.4s; /* Duração da transição */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Sombra */
+}
+
+.error a{
+    text-decoration: none;
+}
+.b1:hover{
+    background-color: var(--cor-01);
+}

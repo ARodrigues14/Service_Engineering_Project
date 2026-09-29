@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECD - Login - cliente</title>
+
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- fontawesome-->
+    <script src="https://kit.fontawesome.com/f065e2e831.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+     <!-- bootstrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+
+    <!-- estilo site-->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+     <!-- wrapper   ##########################################################-->
+     <div id="wrapper" class="container">
+        <!-- navbar   ##########################################################-->
+        <div id="navbar" class="container">
+            <nav class="navbar navbar-expand-md cor-navbar">
+                <div class="container-fluid">
+                    <!-- Logotipo ou Menu à Esquerda -->
+                    <a class="navbar-brand text-white me-2" href="index.html">Service Engineering (MECD) - Loaning - 2024/2025</a>
+                  
+                    <!-- Botão de Toggle para Mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Menu principal com itens alinhados à esquerda e à direita 
+                        Tudo  que estiver dentro do colapse, vai ficar escondido no mobile-->
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <!-- Itens à esquerda -->
+                            <ul class="navbar-nav ms-5 me-auto mb-2 mb-md-0">
+                                
+                            </ul>
+                            <!-- Itens à direita -->
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link" href="login-cliente.html">Client</a></li>
+                                <li class="nav-item"><a class="nav-link" href="login-agente.html">Loan officer</a></li>
+                            </ul>
+                        </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <!-- main   ###########################################################-->
+        <div id="main" class="container-fluid d-flex justify-content-center">
+            <div id="card-loan" class="shadow-lg my-5 text-center p-3">
+                
+                <h5 class="texto-roxo">Requested Documents</h5>
+                <form id="loanForm">
+                    {% csrf_token %}
+                    <!-- Dados de Identificação -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label text-cor3 mt-2">Name</label>
+                        <input type="text" class="form-control border-cor3" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-number" class="form-label text-cor3 mt-2">Citizen Card Number</label>
+                            <input type="text" class="form-control border-cor3" id="cc-number" placeholder="Enter CC number" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="nif" class="form-label text-cor3 mt-2">Tax Identification Number</label>
+                            <input type="text" class="form-control border-cor3" id="nif" placeholder="Enter NIF" required>
+                        </div>
+                    </div>
+                    <!--data nascimento-->
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label for="cc-number" class="form-label text-cor3 mt-2">Date of birth</label>
+                            <input type="date" id="birthDate" name="birthDate" class="form-control border-cor3" required>
+                        </div>
+                    </div>
+
+                    <!-- ultimos rendimentos/despesas-->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="nif" class="form-label text-cor3 mt-2">Average 3 last earnings</label>
+
+                            <input type="text" class="form-control border-cor3" id="income" placeholder="Enter average 3 last earnings" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="nif" class="form-label text-cor3 mt-2">Regular Expenses</label>
+
+                            <input type="text" class="form-control border-cor3" id="expenses" placeholder="Enter your total regular expenses" required>
+                        </div>
+                    </div>
+
+                    <!-- tipo trabalhador-->
+                    <div class="row justify-content-center mt-3">
+                        <!-- Checkbox 1 -->
+                        <div class="col-md-4 checkbox-group custom-checkbox">
+                            <label for="checkbox1" class="form-check-label">employee</label>
+                            <input type="checkbox" class="form-check-input" id="checkbox1" name="option1">
+                        </div>
+            
+                        <!-- Checkbox 2 -->
+                        <div class="col-md-4 checkbox-group custom-checkbox">
+                            <label for="checkbox2" class="form-check-label">independent worker</label>
+                            <input type="checkbox" class="form-check-input" id="checkbox2" name="option2">
+                        </div>
+            
+                        <!-- Checkbox 3 -->
+                        <div class="col-md-4 checkbox-group custom-checkbox">
+                            <label for="checkbox3" class="form-check-label">Retiree</label>
+                            <input type="checkbox" class="form-check-input"  id="checkbox3" name="option3">
+                        </div>
+                    </div>
+
+                    <!-- Comprovativo de Rendimentos -->
+                    <div class="mb-3">
+                        <label for="income-proof" class="form-label text-cor3 mt-4">Proof of Income</label>
+                        <input type="file" class="form-control border-cor3" id="income-proof" accept=".pdf,.jpg,.png" required>
+                        <div class="form-text">Envie os últimos recibos de vencimento ou declaração de IRS.</div>
+                    </div>
+
+                    <!-- Comprovativo de Residência -->
+                    <div class="mb-3">
+                        <label for="residence-proof" class="form-label text-cor3 mt-2">Proof of Residence</label>
+                        <input type="file" class="form-control border-cor3" id="residence-proof" accept=".pdf,.jpg,.png" required>
+                        <div class="form-text">Envie uma fatura de serviços ou extrato bancário recente.</div>
+                    </div>
+
+                    <!-- Dados Bancários -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="iban" class="form-label text-cor3 mt-2">IBAN</label>
+                            <input type="text" class="form-control border-cor3" id="iban" placeholder="Digite o IBAN" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="bank-statement" class="form-label text-cor3 mt-2">Bank Statement</label>
+                            <input type="file" class="form-control border-cor3" id="bank-statement" accept=".pdf,.jpg,.png" required>
+                            <div class="form-text">Submit a recent bank statement.</div>
+                        </div>
+                    </div>
+
+                    <!-- Termos e Condições -->
+                    <div class="form-check mb-3 custom-checkbox">
+                        <input class="form-check-input" type="checkbox" id="terms" required>
+                        <label class="form-check-label" for="terms">
+                            I agree with the <a href="#" class="text-cor2">terms and conditions</a>.
+                        </label>
+                    </div>
+
+                    <!-- Botão de Submissão -->
+                    <button id="mlr" type="submit" class="btn btn-primary w-100">Make a loan request</button>
+    
+                </form>
+
+            </div>
+        </div>
+
+        <!-- footer  ##########################################################-->
+        <div id="footer" class="text-white p-4">
+            bla bla bla
+        </div>
+
+
+     </div>
+
+
+    <!--#####################################################################-->
+    <!--Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('loanForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+        });
+
+        const document_url = "{% url 'doc_cliente' %}";
+    </script>
+    <script src="{% static 'documentos.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Personas: 
+- Adição do nível de literacia tecnológica.
+
+Customer Journey Maps:
+- Adição de touchpoints a todos os CMJ, para melhor dividir as atividades;
+- Adição das componentes "Dramatic Arc" e "Backstage Lane".
+
+Stakeholder Map:
+- Refeito praticamente do zero, com a adição de novos stakeholders (IT TEAM, Guarantor, Government, 
+Communications e Client Support)e a eliminação de stakeholders como System e Back Office Lane.
+
+Expectation Maps:
+- Reajustados para se focarem mais na experiência de empréstimo e não no que o cliente
+espera que aconteça após o seu empréstimo ser aprovado.

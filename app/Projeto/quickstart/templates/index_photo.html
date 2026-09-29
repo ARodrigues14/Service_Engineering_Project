@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index New Photo</title>
+</head>
+<body>
+    <h1>Index New Photo</h1>
+    <form action="{% url 'index-faces' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="photos">Photos:</label>
+        <input type="file" id="photos" name="photos" multiple required><br><br>
+        <button type="submit">Index Photo</button>
+    </form>
+</body>
+</html>

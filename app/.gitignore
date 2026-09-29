@@ -1,0 +1,17 @@
+.venv/
+env/
+*.pyc
+test.rest
+.devcontainer/
+env/Lib/site-packages/
+Projeto/__pycache__
+
+# Secrets - never commit these
+.env
+*.pem
+.aws/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index New Photo</title>
+</head>
+<body>
+    <h1>Index New Photo</h1>
+    <form action="{% url 'index_faces_view' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="bucket">Bucket:</label>
+        <input type="text" id="bucket" name="bucket" required><br><br>
+        <label for="photos">Photos:</label>
+        <input type="file" id="photos" name="photos" multiple required><br><br>
+        <label for="collection_id">Collection ID:</label>
+        <input type="text" id="collection_id" name="collection_id" required><br><br>
+        <button type="submit">Index Photo</button>
+    </form>
+</body>
+</html>
