@@ -1,6 +1,6 @@
 # Online Bank Loan Service — Engenharia de Serviços (MECD 2024/2025)
 
-Practical project for the **Service Engineering** course (Universidade de Coimbra, FCTUC/DEI), Group 5.
+Practical project for the **Service Engineering** course (Universidade de Coimbra, FCTUC/DEI).
 The goal was to model and implement the service of **requesting a bank loan online**:
 
 1. The customer simulates a loan (amount, duration, monthly payment) on the bank's website.
